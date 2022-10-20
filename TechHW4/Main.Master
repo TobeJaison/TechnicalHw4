@@ -1,0 +1,73 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="TechHW4.Main" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Pet Meds System</title>
+     <meta charset="utf-8">
+      
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="bootstrap.bundle.min.js"></script>
+    <link href="bootstrap.min.css" rel="stylesheet" />
+    <style>
+        .nav > li > a:hover{
+            color:blueviolet;
+        }
+    </style>
+    <script>
+        function message() {
+            alert("Your order has been placed");
+            $("#medication1").prop("checked", false);
+            $("#medication2").prop("checked", false);
+            $("#medication3").prop("checked", false);
+        }
+        
+    </script>
+    <script src="jquery-3.6.1.min.js"></script>
+  
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+       
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div>
+                <div class ="d-flex justify-content-between">
+                    <h1 style ="color:blue; margin-left:5%; display:inline-block;">Pet Meds System</h1>
+                    <nav class="navbar navbar-expand-sm bg-light">
+  
+                        <ul class="navbar-nav ml-auto nav">
+                            <li class="nav-item">
+                              <a class="nav-link" href = "Vet.aspx">
+                                  Vet
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href ="CustomerServiceRep.aspx">
+                                  Customer Service Representative
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href = "DispensingDepartment.aspx">
+                                 Dispensing Department
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href = "MasterPage.aspx">
+                                Logout
+                              </a>
+                            </li>
+                      </ul>
+                    </nav>
+              </div>    
+            
+            </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
